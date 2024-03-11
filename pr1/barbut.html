@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barbut</title>
+    <style>
+        body, html {
+            background-color: #193b0f;
+            max-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+
+        .choice {
+            font-size: 3rem;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .choice:hover {
+            box-shadow: 0 0 150px 10px;
+            color: darkgray;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 7rem;
+        }
+
+        .image {
+            height: 150px;
+        }
+
+        .bigContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 250px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .imageContainer {
+            display: inline-block;
+        }
+
+        button {
+            margin-top: 50px;
+            background-color: #184201;
+            border-radius: 5px;
+            height: 2.5rem;
+            width: 6rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        @media (orientation: landscape) and (max-width: 900px) {
+            .choice {
+                font-size: 1rem;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .image {
+                height: 50px;
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a class="choice" href="barbut.html">Barbut</a>
+    <a class="choice" href="1dice.html">1 Dice</a>
+    <a class="choice" href="2dice.html">2 Dice</a>
+    <a class="choice" href="versus.html">Versus</a>
+</header>
+
+<main>
+    <h1>Roll the Dice!</h1>
+    <div class="bigContainer">
+        <div class="container player1">
+            <h2>Player 1</h2>
+            <div class="imageContainer">
+                <img class="image image1" src="./images/dice.svg" alt="Dice">
+                <img class="image image2" src="./images/dice.svg" alt="Dice">
+            </div>
+            <p id="change1" style="font-weight: bold; font-size: 2rem"></p>
+            <button id="button1">Press "Shift"</button>
+
+        </div>
+        <div class="container player2">
+            <h2>Player 2</h2>
+            <div class="imageContainer">
+                <img class="image image3" src="./images/dice.svg" alt="Dice">
+                <img class="image image4" src="./images/dice.svg" alt="Dice">
+            </div>
+            <p id="change2" style="font-weight: bold; font-size: 2rem"></p>
+            <button id="button2">Press "Enter"</button>
+        </div>
+    </div>
+    <button id="button3" style="height: 3rem; width: 10rem">Press "Space" for the results</button>
+</main>
+
+<footer>
+    <p>@SMG. All rights reserved.</p>
+</footer>
+
+<script src="barbut.js"></script>
+
+</body>
+</html>
